@@ -30,6 +30,10 @@ namespace Assignment_2
                 double Volume = Length * Width * Height;
                 //Output solutions to Label1
                 label1.Text = "Volume =" + Length * Width * Height;
+                //Calculate Area using the equation, 2.0*(Lengh + Width + Height)
+                Double Area = 2.0 * (Length + Width + Height);
+                //Output solution to Label5
+                label5.Text = "Area =" + 2.0 * (Length + Width + Height);
             }
             catch
             {
@@ -44,6 +48,26 @@ namespace Assignment_2
         private void Label3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            //Reading the values for the raduis
+            double Radius = double.Parse(textBox4.Text);
+
+            //Calculating the Area and Volume using the respective equations
+            Double Area = Math.PI * r
+
         }
     }
 }
