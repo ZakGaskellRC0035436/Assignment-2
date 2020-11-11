@@ -29,11 +29,11 @@ namespace Assignment_2
                 //Calculate Volume using the equation, Length * Width * Height
                 double Volume = Length * Width * Height;
                 //Output solutions to Label1
-                label1.Text = "Volume =" + Length * Width * Height;
+                label1.Text = "Volume =" + Volume;
                 //Calculate Area using the equation, 2.0*(Lengh + Width + Height)
                 Double Area = 2.0 * (Length + Width + Height);
                 //Output solution to Label5
-                label5.Text = "Area =" + 2.0 * (Length + Width + Height);
+                label5.Text = "Area =" + Area;
             }
             catch
             {
@@ -62,11 +62,57 @@ namespace Assignment_2
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            //Reading the values for the raduis
-            double Radius = double.Parse(textBox4.Text);
-
+            //Use Try-Catch to avoid imput errors
+            try
+            {
+                //Reading the values for the raduis
+                double Radius = double.Parse(textBox4.Text);
             //Calculating the Area and Volume using the respective equations
-            Double Area = Math.PI * r
+            Double Area = 4.0 * Math.PI * Radius * Radius * Radius;
+            Double Volume = 4.0 / 3.0 * Math.PI * Radius * Radius * Radius;
+            //Output solution to labels
+            label7.Text = "Area =" + 4 * Math.PI * Radius * Radius * Radius;
+            label8.Text = "Volume =" + 4.0 / 3.0 * Math.PI * Radius * Radius * Radius;
+            }
+            catch
+            {
+                MessageBox.Show("Error On Imput");
+            }
+        }
+
+        private void TextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            //Use Try-Catch to avoid imput errors
+            try
+            {
+                //Reading the values for the raduis and Height
+                double Radius = double.Parse(textBox5.Text);
+                double Width = double.Parse(textBox6.Text);
+                //Calculating the Area and Volume using the respective equations
+                Double Area = Math.PI * Radius *(Radius + Math.Sqrt(Height * Height + Radius * Radius));
+                Double Volume = 1.0 / 3.0 * Math.PI * Radius * Radius * Height;
+                //Output solution to labels
+                label10.Text = "Area =" + Math.PI * Radius *(Radius + Math.Sqrt(Height * Height + Radius * Radius));
+                label11.Text = "Volume =" + 1.0 / 3.0 * Math.PI * Radius * Radius * Height;
+            }
+            catch
+            {
+                MessageBox.Show("Error On Imput");
+            }
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
